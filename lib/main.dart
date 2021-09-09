@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
@@ -10,7 +9,7 @@ void main() {
         appBar: AppBar(
           backgroundColor: Colors.green,
           title: Text(
-            "Hello Bangladesh",
+            "I'm poor",
             style: TextStyle(
               // color: Colors.green,
               color: Color(0xffFFFF00),
@@ -23,6 +22,29 @@ void main() {
             ), 
           ),
         ),
+
+        // body: Center(
+        //   child: Image.asset(
+        //     "assets/poor_man.png",
+        //     width: 200,
+        //     height: 200,
+        //   ),
+        // ),
+
+        // body: Center(
+        //   child: CircleAvatar(
+        //     radius: 80,
+        //     backgroundImage: NetworkImage("https://picsum.photos/250?image=9")
+        //   ),
+        // ),
+
+        body: Center(
+          child: CircleAvatar(
+            radius: 80,
+            backgroundImage: AssetImage("assets/poor_man.png")
+          ),
+        ),
+
       ),
     ),
   );

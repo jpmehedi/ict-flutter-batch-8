@@ -5,6 +5,9 @@ void main() {
     MaterialApp(
       title: "Demo App",
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: "Lobster"
+      ),
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.green,
@@ -15,8 +18,8 @@ void main() {
               color: Color(0xffFFFF00),
               fontSize: 28,
               // fontWeight: FontWeight.bold,
-              fontWeight: FontWeight.w700,
-              fontFamily: "arial",
+              // fontWeight: FontWeight.w700,
+              // fontFamily: "Lobster",
               // fontStyle: FontStyle.italic,
               letterSpacing: 5.0,
             ), 
@@ -38,12 +41,22 @@ void main() {
         //   ),
         // ),
 
+        // body: Center(
+        //   child: CircleAvatar(
+        //     radius: 80,
+        //     backgroundImage: AssetImage("assets/poor_man.png")
+        //   ),
+        // ),
+
         body: Center(
-          child: CircleAvatar(
-            radius: 80,
-            backgroundImage: AssetImage("assets/poor_man.png")
-          ),
+          child: Icon(
+            Icons.camera_alt_outlined,
+            size: 200,
+            color: Colors.green,
+          )
         ),
+
+        
 
       ),
     ),

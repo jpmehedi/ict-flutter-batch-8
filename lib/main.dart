@@ -9,7 +9,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Lobster"
-      ),
+      ),  
       home: HomePage()
     ),
   );

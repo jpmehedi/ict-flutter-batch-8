@@ -17,13 +17,81 @@ class HomePage extends StatelessWidget {
             ), 
           ),
         ),
-        body: Center(
-          child: Icon(
-            Icons.camera_alt_outlined,
-            size: 200,
-            color: Colors.green,
-          )
+        body: Container(
+          height: double.infinity,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                color: Colors.red,
+                child: FlutterLogo(
+                  size: 100,
+                ),
+              ),  
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    color: Colors.green,
+                    child: FlutterLogo(
+                      size: 100,
+                    ),
+                  ), 
+                  Container(
+                    color: Colors.red,
+                    child: FlutterLogo(
+                      size: 100,
+                    ),
+                  ),
+                    Container(
+                    color: Colors.red,
+                    child: FlutterLogo(
+                      size: 100,
+                    ),
+                  ),
+                ],
+              ),
+
+              Container(
+                color: Colors.orange,
+                child: FlutterLogo(
+                  size: 100,
+                ),
+              )
+            ],
+          ),
         ),
-      );
+     );
   }
 }
+
+
+// Container(
+//           width: double.infinity,
+//           color: Colors.pink,
+//           child: Column(
+//             mainAxisAlignment: MainAxisAlignment.spaceAround,
+//             crossAxisAlignment: CrossAxisAlignment.center,
+//             children: [
+//               Container(
+//                 color: Colors.red,
+//                 child: FlutterLogo(
+//                   size: 100,
+//                 ),
+//               ),
+//               Container(
+//                 color: Colors.green,
+//                 child: FlutterLogo(
+//                   size: 100,
+//                 ),
+//               ),
+//               Container(
+//                 color: Colors.orange,
+//                 child: FlutterLogo(
+//                   size: 100,
+//                 ),
+//               )
+//             ],
+//           ),
+//         )

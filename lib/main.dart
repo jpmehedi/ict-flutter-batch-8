@@ -1,5 +1,5 @@
 
-import 'package:demo_project/profile.dart';
+import 'package:demo_project/contact.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +11,9 @@ void main() {
       //   fontFamily: "Lobster"
       // ),  
       // home: HomePage()
-      home: ProfileScreen(),
+      // home: ProfileScreen(),
+
+      home: ContactScreen(),
     ),
   );
 }

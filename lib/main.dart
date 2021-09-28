@@ -1,5 +1,5 @@
 
-import 'package:demo_project/contact.dart';
+import 'package:demo_project/screen_one.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +13,7 @@ void main() {
       // home: HomePage()
       // home: ProfileScreen(),
 
-      home: ContactScreen(),
+      home: ScreenOne()
     ),
   );
 }

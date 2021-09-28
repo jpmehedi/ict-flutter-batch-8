@@ -20,34 +20,63 @@ class ContactScreen extends StatelessWidget {
                 Positioned(
                   left: 20,
                   top: 20,
-                  child: CircleAvatar(
-                    radius: 32,
-                    backgroundImage: AssetImage("assets/poor_man.png"),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        radius: 32,
+                        backgroundImage: AssetImage("assets/poor_man.png"),
+                      ),
+                      Text(
+                        "Mehedi Hasan",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24
+                        ),
+                      ),
+                      Text(
+                        "mehedihasaninfrom@gmail.com",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                Positioned(
-                  left: 20,
-                  top: 80,
-                  child: Text(
-                    "Mehedi Hasan",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 20,
-                  top: 110,
-                  child: Text(
-                    "mehedihasaninfrom@gmail.com",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14
-                    ),
-                  ),
-                )
               ],
+            ),
+
+            ListTile(
+              onTap: (){},
+              leading: Icon(Icons.music_note),
+              title: Text("Music"),
+            ),
+            ListTile(
+              onTap: (){},
+              leading: Icon(Icons.movie),
+              title: Text("Movie"),
+            ),
+            ListTile(
+              onTap: (){},
+              leading: Icon(Icons.settings),
+              title: Text("Settings"),
+            ),
+
+            InkWell(  
+              onTap: (){},
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                width: double.infinity,
+                height: 48,
+                child: Row(
+                  children: [
+                    Icon(Icons.video_call),
+                    SizedBox(width: 20,),
+                    Text("Video Call")
+                  ],
+                )
+              ),
             )
           ],
         ),

@@ -25,6 +25,11 @@ class _HomeScreenState extends State<HomeScreen> {
       width: double.infinity,
       height: double.infinity,
       color: Colors.teal,
+    ),
+    Container(
+      width: double.infinity,
+      height: double.infinity,
+      color: Colors.orange,
     )
   ];
 
@@ -34,7 +39,9 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(title: Text("BottonNavigationBar"),),
       body: screens.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem> [
+          
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: "Setting"
@@ -47,8 +54,18 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(Icons.person),
             label: "Profile"
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: "Search"
+          ),
         ],
         currentIndex: selectedIndex,
+        selectedItemColor: Colors.orange,
+        unselectedItemColor: Colors.blue,
+        iconSize: 40,
+        selectedFontSize: 28,
+        unselectedFontSize: 25,
+        elevation: 20,
         onTap: (int index){
           setState(() {
             selectedIndex = index;

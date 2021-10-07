@@ -41,7 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem> [
-          
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: "Setting"

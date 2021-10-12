@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({ Key? key }) : super(key: key);
+
+  final String? name;
+  final int? age;
+  const ProfileScreen({this.name, this.age});
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.teal,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: 20  ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -18,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             Container(
               child: Text(
-                "Mr. Mehedi Hasan",
+                "$name",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 28,
@@ -28,7 +32,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             Text(
-              "Flutter Developer",
+              "$age",
               style: TextStyle(
                 fontSize:24,
                 fontFamily: "SourceCodePro",

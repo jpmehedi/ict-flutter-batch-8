@@ -1,3 +1,4 @@
+import 'package:demo_project/profile.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldScreen extends StatefulWidget {
@@ -9,6 +10,8 @@ class TextFieldScreen extends StatefulWidget {
 
 class _TextFieldScreenState extends State<TextFieldScreen> {
 
+  TextEditingController nameEditingController = TextEditingController();
+  int age = 20;
   bool isTap = false;
   @override
   Widget build(BuildContext context) {
@@ -20,17 +23,24 @@ class _TextFieldScreenState extends State<TextFieldScreen> {
         child: Column(
           children: [
             TextField(
+              controller: nameEditingController,
               onTap: (){
                 setState(() {
                   isTap = true;
                 });
               },
-              maxLength: 4,
+
+              onChanged: (String name){
+                 setState(() {
+                   
+                 }); 
+              },
+              // maxLength: 4,
               // obscureText: true,
               // obscuringCharacter: "*",
               // keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
-                icon: Icon(Icons.person),
+                // icon: Icon(Icons.person),
                 hintText:  "Enter your name",
                 hintStyle: TextStyle(
                   color:isTap ? Colors.red: Colors.orange
@@ -64,6 +74,25 @@ class _TextFieldScreenState extends State<TextFieldScreen> {
                 fillColor: Colors.white
             
               ),
+            ),
+            SizedBox(height: 22,),
+
+           nameEditingController.text.isNotEmpty ? Text(
+              "${nameEditingController.text}",
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.bold
+              ),
+            ) : Text("Empty Field"),
+
+            SizedBox(height: 22,),
+            ElevatedButton(
+              onPressed: (){
+
+                Route route = MaterialPageRoute(builder: (ctx)=> ProfileScreen(name: nameEditingController.text, age: age, ));
+                Navigator.push(context, route);
+              }, 
+              child: Text("Click me")
             )
           ],
         ),

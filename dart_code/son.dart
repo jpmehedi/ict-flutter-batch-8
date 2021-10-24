@@ -1,6 +1,7 @@
 import 'father.dart';
+import 'mother.dart';
 
-class Son extends Father {
+class Son extends Father with Mother {
   String? name;
   int? age;
   Son({this.name, this.age});

@@ -23,7 +23,7 @@ class ProfileScreen extends StatelessWidget {
             Container(
               child: Text(
                 "$name",
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 28,
                   fontFamily: "Lobster",

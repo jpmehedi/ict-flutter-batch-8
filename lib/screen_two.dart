@@ -2,6 +2,7 @@ import 'package:demo_project/screen_three.dart';
 import 'package:flutter/material.dart';
 
 class ScreenTwo extends StatelessWidget {
+   static final String path = "ScreenTwo";
   const ScreenTwo({ Key? key }) : super(key: key);
 
   @override
@@ -22,14 +23,14 @@ class ScreenTwo extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> ScreenThree()));
+                Navigator.pushNamed(context, ScreenThree.path);
               }, 
               child: Text("Screen Two")
             ),
             SizedBox(height: 20,),
             ElevatedButton(
               onPressed: (){
-               Navigator.pop(context);
+                Navigator.pop(context);
               }, 
               child: Text("Back")
             ),

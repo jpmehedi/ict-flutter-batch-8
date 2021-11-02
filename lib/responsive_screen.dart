@@ -6,44 +6,45 @@ class ResponsiveScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(title: Text("Responsive"),),
+      appBar: AppBar(title: Text("Responsive $width"),),
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-           Row(
-             children: [
-               Expanded(
-                 flex: 2,
-                 child: Container(
-                   height: 150,
-                   color: Colors.orange,
-                 ),
-               ),
-              Expanded(
-                flex: 4,
-                child: Container(
-                   height: 150,
-                   color: Colors.blue,
-                 ),
-              ),
-              Expanded(
-                flex: 3,
-                child: Container(
-                   height: 150,
-                   color: Colors.teal,
-                 ),
-              ),
-              Expanded(
-                flex: 3,
-                child: Container(
-                   height: 150,
-                   color: Colors.orange,
-                 ),
-              ),
-             ],
-           ),
+          //  Row(
+          //    children: [
+          //      Expanded(
+          //        flex: 2,
+          //        child: Container(
+          //          height: 150,
+          //          color: Colors.orange,
+          //        ),
+          //      ),
+          //     Expanded(
+          //       flex: 4,
+          //       child: Container(
+          //          height: 150,
+          //          color: Colors.blue,
+          //        ),
+          //     ),
+          //     Expanded(
+          //       flex: 3,
+          //       child: Container(
+          //          height: 150,
+          //          color: Colors.teal,
+          //        ),
+          //     ),
+          //     Expanded(
+          //       flex: 3,
+          //       child: Container(
+          //          height: 150,
+          //          color: Colors.orange,
+          //        ),
+          //     ),
+          //    ],
+          //  ),
          
             // Row(
             //   children: [
@@ -96,10 +97,67 @@ class ResponsiveScreen extends StatelessWidget {
             //     ],
             //   ),
             // ),
-            Container(
-              width: 150,
-              height: 150,
-              color: Colors.teal,
+
+            Wrap(
+              children: [
+                Container(
+                  width: 150,
+                  height: 150,
+                  color: Colors.orange,
+                ),
+               Container(
+                  width: 150,
+                  height: 150,
+                  color: Colors.blue,
+                ),
+               Container(
+                  width: 150,
+                  height: 150,
+                  color: Colors.teal,
+                ),
+               Container(
+                  width: 150,
+                  height: 150,
+                  color: Colors.orange,
+                  
+                ),
+                   Container(
+                  width: 150,
+                  height: 150,
+                  color: Colors.blue,
+                ),
+              ],
+            ),
+
+
+           width < 480 ? Column(
+               children: [
+                Container(
+                  height: 150,
+                  width: MediaQuery.of(context).size.width,
+                  color: Colors.teal,
+                ),
+                Container(
+                  height: 150,
+                  width: MediaQuery.of(context).size.width,
+                  color: Colors.green,
+                ),
+               ],
+             ) : Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 150,
+                    color: Colors.teal,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    height: 150,
+                    color: Colors.green,
+                  ),
+                ),
+              ],
             ),
             Container(
               width: 150,

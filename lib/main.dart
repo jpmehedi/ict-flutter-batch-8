@@ -1,4 +1,5 @@
 
+import 'package:demo_project/responsive_screen.dart';
 import 'package:demo_project/screen_three.dart';
 import 'package:demo_project/screen_two.dart';
 import 'package:flutter/material.dart';
@@ -36,10 +37,11 @@ void main() {
         )
 
       ),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
 
-      initialRoute: ScreenOne.path,
+      initialRoute: ResponsiveScreen.path,
       routes: {
+        ResponsiveScreen.path: (ctx)=> ResponsiveScreen(),
         ScreenOne.path : (ctx)=> ScreenOne(),
         ScreenTwo.path : (ctx)=> ScreenTwo(),
         ScreenThree.path : (ctx)=> ScreenThree(),

@@ -6,6 +6,122 @@ void main(){
     debugShowCheckedModeBanner: false,
      home: Scaffold(
        backgroundColor: Colors.teal,
+       appBar: AppBar(title: Text("Drawer"),),
+       drawer: Drawer(
+         child: Column(
+           children: [
+             Container(
+               child: Stack(
+                 children: [
+
+                   Image.network(
+                     "https://picsum.photos/250?image=9",
+                     width: double.infinity,
+                     height: 200,
+                     fit: BoxFit.cover,
+                   ),
+
+                   Positioned(
+                     top: 20,
+                     left: 20,
+                      // bottom: 10,
+                      // right: 0,
+                     child: CircleAvatar(
+                       radius: 36,
+                       backgroundImage: AssetImage("assets/poor_man.png"),
+                     ),
+                   ),
+
+                   Positioned(
+                     bottom: 80,
+                     left: 20,
+                     child: Text(
+                      "Mehedi Hasan", 
+                       style: TextStyle(color: Colors.white, fontSize: 18),
+                    )
+                   ),
+                   Positioned(
+                     bottom: 60,
+                     left: 20,
+                     child: Text(
+                       "mehedihasaninform@gamil.com",
+                       style: TextStyle(color: Colors.white, fontSize: 18),
+                                     ),
+                   )
+
+                 ],
+               ),
+             ),
+
+             ListTile(
+               onTap: (){},
+               leading: CircleAvatar(
+                 radius: 18,
+                 backgroundImage: AssetImage("assets/poor_man.png"),
+               ),
+               title: Text("This is title"),
+               subtitle: Text("This is sub-title"),
+               trailing: Icon(Icons.arrow_forward_ios),
+             ),
+             
+             ListTile(
+               onTap: (){},
+               leading: CircleAvatar(
+                 radius: 18,
+                 backgroundImage: AssetImage("assets/poor_man.png"),
+               ),
+               title: Text("This is title"),
+               subtitle: Text("This is sub-title"),
+               trailing: Icon(Icons.arrow_forward_ios),
+             ),
+
+            ListTile(
+               onTap: (){},
+               leading: CircleAvatar(
+                 radius: 18,
+                 backgroundImage: AssetImage("assets/poor_man.png"),
+               ),
+               title: Text("This is title"),
+               subtitle: Text("This is sub-title"),
+               trailing: Icon(Icons.arrow_forward_ios),
+             ),
+
+             ListTile(
+               onTap: (){},
+               leading: CircleAvatar(
+                 radius: 18,
+                 backgroundImage: AssetImage("assets/poor_man.png"),
+               ),
+               title: Text("This is title"),
+               subtitle: Text("This is sub-title"),
+               trailing: Icon(Icons.arrow_forward_ios),
+             ),
+
+
+            //  Container(
+            //    padding: EdgeInsets.symmetric(horizontal: 20),
+            //    child: Row(
+            //      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //      children: [
+            //        CircleAvatar(
+            //         radius: 18,
+            //         backgroundImage: AssetImage("assets/poor_man.png"),
+            //        ),
+            //        Column(
+            //          crossAxisAlignment: CrossAxisAlignment.start,
+            //          children: [
+            //             Text("This is title"),
+            //             Text("This is sub-title"),
+            //          ],
+            //        ),
+            //        Icon(Icons.arrow_forward_ios),
+
+            //      ],
+            //    ),
+            //  )
+           ],
+         ),
+       ),
        body: Padding(
          padding: const EdgeInsets.all(20.0),
          child: Column(

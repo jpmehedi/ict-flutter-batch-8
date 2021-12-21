@@ -5,47 +5,131 @@ void main(){
     MaterialApp(  
     debugShowCheckedModeBanner: false,
      home: Scaffold(
-       appBar: AppBar(title: Text("ListView"),),
-        body: Builder(
-          builder: (context) {
-            return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    onPressed: (){
-                      showDialog(
-                        barrierDismissible: false,
-                        barrierColor: Colors.pink,
-                        context: context, 
-                        useSafeArea:false,
-                        builder: (context){
-                          return AlertDialog(
-                            title: Text("This is title"),
-                            content: FlutterLogo(),
-                            actions: [
-                              TextButton(
-                                onPressed: (){}, 
-                                child: Text("Yes")
-                              ),
-                               TextButton(
-                                onPressed: (){
-                                  Navigator.pop(context);
-                                }, 
-                                child: Text("No")
-                              )
-                            ],
-                          );
-                        }
-                      );
-                    }, 
-                    child: Text("Click")
-                  )
-                ],
+       backgroundColor: Colors.teal,
+       appBar: AppBar(title: Text("TextField"),),
+
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            TextField(
+              // maxLength: 6,
+              maxLines: 6,
+              keyboardType: TextInputType.emailAddress,
+              // obscureText: true,
+              // obscuringCharacter: "*",
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  // borderSide: BorderSide.none
+                  borderSide: BorderSide(
+                    color: Colors.orange,
+                    width: 2
+                  ),
+                  // borderRadius: BorderRadius.circular(20)
+                ),
+                focusedBorder: OutlineInputBorder(
+                  // borderSide: BorderSide.none
+                  borderSide: BorderSide(
+                    color: Colors.pink,
+                    width: 2
+                  ),
+                  // borderRadius: BorderRadius.circular(20)
+                ),
+
+                suffixIcon:  Icon(Icons.visibility_off),
+                prefixIcon: Icon(Icons.person),
+
+                hintText: "Enter your password..",
+                hintStyle: TextStyle(
+                  color: Colors.red
+                ),
+                label:  Text("Password"),
+                labelStyle: TextStyle(
+                  color: Colors.purple
+                ),
+                filled: true,
+                fillColor: Colors.white,
+                icon: Icon(Icons.home, color: Colors.white,)
               ),
-            );
-          }
+              
+            )
+          ],
         ),
+      ),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // body: Builder(
+        //   builder: (context) {
+        //     return Center(
+        //       child: Column(
+        //         mainAxisAlignment: MainAxisAlignment.center,
+        //         children: [
+                  // ElevatedButton(
+                  //   onPressed: (){
+                  //     showDialog(
+                  //       barrierDismissible: false,
+                  //       barrierColor: Colors.pink,
+                  //       context: context, 
+                  //       useSafeArea:false,
+                  //       builder: (context){
+                  //         return AlertDialog(
+                  //           title: Text("This is title"),
+                  //           content: FlutterLogo(),
+                  //           actions: [
+                  //             TextButton(
+                  //               onPressed: (){}, 
+                  //               child: Text("Yes")
+                  //             ),
+                  //              TextButton(
+                  //               onPressed: (){
+                  //                 Navigator.pop(context);
+                  //               }, 
+                  //               child: Text("No")
+                  //             )
+                  //           ],
+                  //         );
+                  //       }
+                  //     );
+                  //   }, 
+                  //   child: Text("Click")
+                  // )
+        //         ],
+        //       ),
+        //     );
+        //   }
+        // ),
 
         // body: ListView.builder(
         //   itemCount: 50,

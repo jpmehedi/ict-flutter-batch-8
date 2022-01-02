@@ -6,6 +6,12 @@ void main(){
     MaterialApp(  
     debugShowCheckedModeBanner: false,
      home: ScreenOne()
+    // initialRoute: ScreenOne.path,
+    // routes: {
+    //   ScreenOne.path: (ctx)=> ScreenOne(),
+    //   ScreenTwo.path: (ctx)=> ScreenTwo(),
+    //   ScreenThree.path: (ctx)=> ScreenThree(),
+    // },
     ),
   );
 }

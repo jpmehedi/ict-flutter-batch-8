@@ -2,6 +2,7 @@ import 'package:test_project/oop/father.dart';
 
 class Son extends Father{
 
+String name = "sadk";
 
 double div(int a, int b){
   return a / b;
@@ -15,11 +16,11 @@ double div(int a, int b){
   }
 
 
- @override
-  disPlay() {
-    print("Hello Bangladesh");
-    return super.disPlay();
-  }
+//  @override
+//   disPlay() {
+//     print("Hello Bangladesh");
+//     return super.disPlay();
+//   }
 
 
 

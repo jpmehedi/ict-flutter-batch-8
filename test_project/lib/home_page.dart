@@ -83,6 +83,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
     bool isToggle = false;
+    bool isAnimated = false;
+    double opacityLevel = 1.0;
   @override
   Widget build(BuildContext context) {
     return    Container(
@@ -91,13 +93,91 @@ class _HomeState extends State<Home> {
       color: Colors.teal,
       child: Column(
         children: [
-          Switch(
-            value: isToggle, 
-            onChanged: (value){
+          // Switch(
+          //   value: isToggle, 
+          //   onChanged: (value){
+          //       setState(() {
+          //         isToggle =! isToggle;
+          //       });
+          //   }
+          // )
+
+
+          // Hero(
+          //   tag: "tag",
+          //   child: FlutterLogo(
+          //     size: 100,
+          //   ),
+          // ),
+
+
+
+          // GestureDetector(
+          //   onTap: (){
+          //     setState(() {
+          //       isAnimated = !isAnimated;
+          //     });
+          //   },
+          //   child: AnimatedContainer(
+          //     curve: Curves.easeInOut,
+          //     width: isAnimated? 300 : 200,
+          //     height:isAnimated ? 300 : 200,
+          //     color: isAnimated ? Colors.yellow : Colors.pink,
+          //     duration: Duration(seconds: 2),
+          //     child: FlutterLogo(size: 40,),
+          //   ),
+          // ),
+
+
+          
+
+
+          // GestureDetector(
+          //   onTap: (){
+          //     setState(() {
+          //       isAnimated = !isAnimated;
+          //     });
+          //   },
+          //   child: Container(
+          //     height: 400,
+          //     width: 400,
+          //     color: Colors.purple,
+          //     child: AnimatedAlign(
+          //       alignment:isAnimated ?Alignment.bottomRight : Alignment.bottomLeft,
+          //       curve: Curves.easeInOut,
+          //       duration: Duration(seconds: 5),
+          //       child: FlutterLogo(size: 40,),
+          //     ),
+          //   ),
+          // ),
+
+
+          
+
+          AnimatedOpacity(
+            opacity: opacityLevel,
+            curve: Curves.easeInOut,
+            duration: Duration(seconds: 5),
+            child: FlutterLogo(size: 150,),
+          ),
+
+
+
+          ElevatedButton(
+            onPressed: (){
+              if(opacityLevel == 1.0){
                 setState(() {
-                  isToggle =! isToggle;
+                  opacityLevel = 0.0;
                 });
-            }
+              }else{
+                setState(() {
+                  opacityLevel = 1.0;
+                });
+              }
+              // Route route = MaterialPageRoute(builder: (ctx)=> ScreenOne());
+              // Navigator.push(context, route);
+            }, 
+            child: Text("Click")
           )
         ],
       ),

@@ -16,6 +16,12 @@ class ScreenOne extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+          Hero(
+            tag: "tag",
+            child: FlutterLogo(
+              size: 300,
+            ),
+          ),
             ElevatedButton(
               onPressed: (){
                 Route route = MaterialPageRoute(builder: (context)=> ScreenTwo(name: name, age: age,));

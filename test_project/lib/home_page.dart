@@ -171,7 +171,7 @@ class _HomeState extends State<Home> {
                 });
               }else{
                 setState(() {
-                  opacityLevel = 1.0;
+                  opacityLevel  = 1.0;
                 });
               }
               // Route route = MaterialPageRoute(builder: (ctx)=> ScreenOne());
